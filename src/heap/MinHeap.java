@@ -1,6 +1,5 @@
 package heap;
 
-// Java program for the above approach
 import java.util.*;
 
 // A class for Min Heap
