@@ -82,7 +82,7 @@ public int rob3(int[] nums) {
     if(nums.length==1)
         return nums[0];
     dp[0]=0;
-    dp[1]=nums[1];
+    dp[1]=nums[0];
     for(int i=2;i<=nums.length;i++){
         int steal = nums[i-1]+dp[i-2];
         int skip = dp[i-1];
@@ -93,8 +93,8 @@ public int rob3(int[] nums) {
 
 }
     public static void main(String[] args) {
-        System.out.println(new HouseRobber().rob(new int[]{1,2,3,1}));
-        System.out.println(new HouseRobber().rob(new int[]{40,2,4,10}));
+        System.out.println(new HouseRobber().rob3(new int[]{1,2,3,1}));
+        System.out.println(new HouseRobber().rob3(new int[]{40,2,4,10}));
 
     }
 }
