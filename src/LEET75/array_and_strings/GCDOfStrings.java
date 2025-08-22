@@ -29,6 +29,18 @@ Constraints:
 
 1 <= str1.length, str2.length <= 1000
 str1 and str2 consist of English uppercase letters.*/
+
+/*
+* solution:
+* 2. Euclidean Algorithm (Efficient Method)
+The idea:
+
+gcd(a, b) = gcd(b, a % b)
+Keep replacing (a, b) with (b, a % b) until b = 0.
+At that point, a is the GCD.
+*
+* BASICALLY, find gcd of 2 numbers(here length) then take substring of the gcd found
+* */
 public class GCDOfStrings {
     public String gcdOfStrings(String str1, String str2) {
         if (!(str1 + str2).equals(str2 + str1))
@@ -85,8 +97,13 @@ public class GCDOfStrings {
         return "";
     }
     public static void main(String[] args) {
-        System.out.println(new GCDOfStrings().gcdOfStringsRecursion("ABCABC", "ABC"));
-        System.out.println(new GCDOfStrings().gcdOfStringsRecursion("ABABAB", "ABAB"));
-        System.out.println(new GCDOfStrings().gcdOfStringsRecursion("LEET", "CODE"));
+//        System.out.println(new GCDOfStrings().gcdOfStringsRecursion("ABCABC", "ABC"));
+//        System.out.println(new GCDOfStrings().gcdOfStringsRecursion("ABABAB", "ABAB"));
+//        System.out.println(new GCDOfStrings().gcdOfStringsRecursion("LEET", "CODE"));
+
+//        System.out.println(new GCDOfStrings().gcdOfStrings("ABCABC", "ABC"));
+                System.out.println(new GCDOfStrings().gcdOfStrings("ABABAB", "ABAB"));
+
+
     }
 }

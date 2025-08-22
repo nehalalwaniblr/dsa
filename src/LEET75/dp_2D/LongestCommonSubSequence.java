@@ -2,7 +2,8 @@ package LEET75.dp_2D;
 
 import java.util.Arrays;
 
-/*Given two strings text1 and text2, return the length of their longest common subsequence. If there is no common subsequence, return 0.
+/*https://leetcode.com/problems/longest-common-subsequence/description/
+Given two strings text1 and text2, return the length of their longest common subsequence. If there is no common subsequence, return 0.
 
 A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.
 
@@ -58,7 +59,7 @@ public class LongestCommonSubSequence {
     }
 
     //    Bottom up approach
-//    dp[i][j] means the longest common subseq between str1 and str2 of length i and j repsectively
+//    dp[i][j] means the longest common subseq between str1 and str2 of length i and j respectively
     public int longestCommonSubsequenceDp(String text1, String text2) {
         int[][] dp =new int[text1.length()+1][text2.length()+1];
         for (int i = 0; i < text2.length(); i++) {

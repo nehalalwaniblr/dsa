@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-class GroupSimilarTitles {
+public class GroupSimilarTitles {
     public static List<List<String>> groupTitles(String[] strs){
         if (strs.length == 0)
             return new ArrayList<>();

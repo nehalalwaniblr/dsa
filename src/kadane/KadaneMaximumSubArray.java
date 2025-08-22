@@ -1,8 +1,11 @@
 package kadane;
 
 public class KadaneMaximumSubArray {
-    /*
-     * Kadane algorith says:
+    /* Kadane algorithm: finds the maximum sum subarray in an array in O(n) time.
+    "Subarray" means a contiguous part of the array.
+
+It works with positive and negative numbers.
+     * Kadane algorithm says:
      * At any index i shall I start a new array or add the current element to existing subarray
      * i.e. initialize currentSubArraySum=a[0]; now check if you should add a[1] to currentSubArraySum(a[1]+currentSubArraySum) or start a new subaaray i.e.currentSubArraySum=a[1]
      * */

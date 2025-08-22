@@ -1,5 +1,14 @@
 package binary_search;
 
+/*📌
+4-Liner Summary of the Entire Algorithm
+Binary search on the smaller array to find a partition.
+
+Partition the arrays such that left and right parts are balanced.
+
+Check if the max of left ≤ min of right — if yes, compute median.
+
+If not, adjust binary search window and repeat.*/
 public class FindMedianSortedArrays {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         // Ensure nums1 is the smaller array;1,3,7,8,9,11,15,18,19,19,21,25

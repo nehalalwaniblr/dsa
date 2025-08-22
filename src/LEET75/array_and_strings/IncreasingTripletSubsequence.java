@@ -36,22 +36,47 @@ public class IncreasingTripletSubsequence {
     * There are multiple approaches to it:
     * 1. Brute force O(n^3)
     * 2. DP: see LIS ; patience sort
-    * 3. Using 3 variables; consider n1 and n2 to be set ot INTEGER.MAX_VALUE; consider n3 to be current index val;
+    * 3. Using 3 variables; consider n1 and n2 to be set to INTEGER.MAX_VALUE; consider n3 to be current index val;
     * check if n3<n1; yes make n1= n3; else if n3<n2; yes make it n2=n3; this way we have ensured n1<n2;
     * now whatever no. comes next if it doesn't satisfies first two criterias that means n3 is the largest amongst the traversal hence return true
     * */
+    /*The Core Thought Process
+We want to detect whether there exists a triplet (a < b < c) in order.
+Instead of storing all possible subsequences (which would be costly), we track just two numbers:
+
+nums1: The smallest number seen so far (candidate for the 1st element of triplet).
+
+nums2: The second smallest number seen so far that comes after nums1 (candidate for the 2nd element of triplet).
+
+Now, as soon as we see a number greater than both nums1 and nums2, that means we found a valid triplet.
+
+Why This Works (Intuition)
+We greedily keep track of the best possible first and second candidates.
+
+By ensuring nums1 < nums2 always, as soon as we see a third number bigger than nums2, we guarantee an increasing triplet subsequence exists.
+
+Time Complexity = O(n)
+
+Space Complexity = O(1)
+
+NOTE: for value of more than 3(triplets) use dp
+*/
     public boolean increasingTriplet(int[] nums) {
-        int nums1 = Integer.MAX_VALUE;
-        int nums2 = Integer.MAX_VALUE;
+        int nums1 = Integer.MAX_VALUE;  // smallest number seen so far
+        int nums2 = Integer.MAX_VALUE;  // second smallest number (after nums1)
 
         for (int i = 0; i < nums.length; i++) {
-            int nums3 = nums[i];
+            int nums3 = nums[i];  // current number
             if (nums3 <= nums1) {
+                // found a new smaller number → update first smallest
                 nums1 = nums3;
             } else if (nums3 <= nums2) {
+                // found something bigger than nums1 but smaller than nums2 → update second smallest
                 nums2 = nums3;
-            } else
+            } else {
+                // found nums3 > nums1 and nums3 > nums2 → triplet exists
                 return true;
+            }
         }
         return false;
     }
@@ -70,6 +95,7 @@ public class IncreasingTripletSubsequence {
      */
 
     public static void main(String[] args) {
+        new IncreasingTripletSubsequence().increasingTriplet(new int[] {2,1,5,0,4,6});
 
     }
 }

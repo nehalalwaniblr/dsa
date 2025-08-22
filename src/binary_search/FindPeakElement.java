@@ -25,7 +25,10 @@ Constraints:
 
 1 <= nums.length <= 1000
 -231 <= nums[i] <= 231 - 1
-nums[i] != nums[i + 1] for all valid i.*/
+nums[i] != nums[i + 1] for all valid i. *************this is important; the array has no plateaus
+
+*/
+
 public class FindPeakElement {
     public int findPeakElement(int[] nums) {
         if(nums==null)
@@ -52,6 +55,8 @@ public class FindPeakElement {
 //        System.out.println(new FindPeakElement().findPeakElement(new int[]{1,2,3,1}));
 //        System.out.println(new FindPeakElement().findPeakElement(new int[]{1,2,1,3,5,6,4}));
 //        System.out.println(new FindPeakElement().findPeakElement(new int[]{6,5,4,3,2,3,2}));
-        System.out.println(new FindPeakElement().findPeakElement(new int[]{3,4,3,2,1}));
+//        System.out.println(new FindPeakElement().findPeakElement(new int[]{3,4,3,2,1}));
+        System.out.println(new FindPeakElement().findPeakElement(new int[]{1,1,1,1,1,1,2,3,1}));
+
     }
 }

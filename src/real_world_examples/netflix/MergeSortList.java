@@ -6,6 +6,16 @@ import java.util.List;
 
 /*Feature # 2: Enable the user to view the top-rated movies worldwide,
 given that we have movie rankings available separately for different geographic regions.*/
+
+/*Time & space complexity:
+You have k lists, each up to length n. You start by merging the first two lists, each with up to n elements,
+which takes O(n + n) = O(n) time. The merged list now can have up to 2n elements.
+ Next, you merge this merged list (up to 2n elements) with the third list (up to n elements), which takes O(2n + n) = O(3n) time.
+ Then, you merge the result (up to 3n elements) with the fourth list (n elements), taking O(4n) time, and so on.
+ Summing these merge times: n + 2n + 3n + ... + (k-1)n = n * (1 + 2 + ... + (k-1)) = n * (k(k-1)/2), which simplifies to O(n × k²).
+  This is why the time complexity grows quadratically with the number of lists k, multiplied by the length n of each list.
+  The space complexity remains O(1) because the merging is done in place without extra data structures.*/
+
 public class MergeSortList {
     public static LinkedListNode mergeKCounty(List<LinkedListNode> lists) {
         if (lists.size() > 1) {

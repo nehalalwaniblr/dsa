@@ -48,19 +48,20 @@ public class HouseRobber {
         return dp[i];
     }
 
+//    Here dp[i] is max profit till ith house
     public int rob2(int[] nums) {
         int[] dp= new int[nums.length+1];
         Arrays.fill(dp,0);
 
-        if(nums.length==1)
+        if(nums.length==1) //if there's only one house
             return nums[0];
-        if(nums.length==2)
+        if(nums.length==2) //if there are two houses
             return Math.max(nums[0],nums[1]);
-        dp[0]=0;
-        dp[1]=nums[0];
+        dp[0]=0; //for 0 house profilt will be 0
+        dp[1]=nums[0]; //for 1 house profit will be money in house 1
         for(int i=2;i<=nums.length;i++){
-            int steal = nums[i-1]+dp[i-2];
-            int skip = dp[i-1];
+            int steal = nums[i-1]+dp[i-2]; //current house + profit till prev to prev house
+            int skip = dp[i-1];  // profit till prev house
             dp[i]=Math.max(steal,skip);
         }
         return dp[nums.length];
