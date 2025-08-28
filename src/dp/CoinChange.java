@@ -34,7 +34,13 @@ Constraints:
 * */
 public class CoinChange {
     int[][] t;
-
+/*https://www.youtube.com/watch?v=H9bfqozjoqs
+* coins = [1,3,4, 5], amount = 7
+* 1. Here greedy won't work - say take 5 then 1 and 1=3 coins which is wrong (3+4=7) is 2 coins
+* 2. DFS - backtracking - top down approach i.e. recursion and memoization
+* 3. Bottom up approach;min no. of coins summing to 0 is 0 i.e. dp[0]=0;summing to 1 is 1 i.e. dp[1]=1;
+*  summing to 2 is 1+dp[1] =2; repeat the process
+* */
     public int coinChange2(int[] coins, int amount) {
         int[] dp = new int[amount+1];
         Arrays.fill(dp, Integer.MAX_VALUE-1);
