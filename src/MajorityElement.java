@@ -27,14 +27,17 @@ n == nums.length
 * */
 public class MajorityElement {
     public static void main(String[] args) {
-        System.out.println(majorityElement(new int[]{3, 2, 3}));
-        System.out.println(majorityElement(new int[]{2, 2, 1, 1, 1, 2, 2}));
+//        System.out.println(majorityElement(new int[]{3, 2, 3}));
+//        System.out.println(majorityElement(new int[]{2, 2, 1, 1, 1, 2, 2}));
+//
+//        System.out.println(majorityElement2(new int[]{3, 2, 3}));
+//        System.out.println(majorityElement2(new int[]{2, 2, 1, 1, 1, 2, 2}));
+//
+//        System.out.println(majorityElement3(new int[]{3, 3, 4}));
+//        System.out.println(majorityElement3(new int[]{2, 2, 1, 1, 1, 2, 2}));
 
-        System.out.println(majorityElement2(new int[]{3, 2, 3}));
+        System.out.println(majorityElement2(new int[]{1,1,1,1,1,2,3,4,5}));
         System.out.println(majorityElement2(new int[]{2, 2, 1, 1, 1, 2, 2}));
-
-        System.out.println(majorityElement3(new int[]{3, 3, 4}));
-        System.out.println(majorityElement3(new int[]{2, 2, 1, 1, 1, 2, 2}));
     }
 
     public static int majorityElement(int[] nums) {

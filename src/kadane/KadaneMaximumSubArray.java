@@ -8,6 +8,7 @@ It works with positive and negative numbers.
      * Kadane algorithm says:
      * At any index i shall I start a new array or add the current element to existing subarray
      * i.e. initialize currentSubArraySum=a[0]; now check if you should add a[1] to currentSubArraySum(a[1]+currentSubArraySum) or start a new subaaray i.e.currentSubArraySum=a[1]
+     * take max of maxSubArray and currentSubArraySum and assign to maxSubArray
      * */
     public int maxSubArray(int[] nums) {
         /*
