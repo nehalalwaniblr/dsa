@@ -54,6 +54,46 @@ public class FindMedianSortedArrays {
         new FindMedianSortedArrays().findMedianSortedArrays(new int[]{1, 3, 8, 9, 15}, new int[]{7, 11, 18, 19, 21, 25});
 
     }
+    //Better than brute force-
+    public double findMedianSortedArrays2(int[] nums1, int[] nums2) {
+        int i =0;int j=0;
+        int mid1 = nums1.length/2;
+        int mid2 = nums2.length/2;
+
+        int ele1=0; int ele2=0;
+        int count =0;
+        while(i<nums1.length && j<nums2.length){
+            if(nums1[i]<=nums2[j]){
+                if(count==mid1) ele1 = nums1[i];
+                if(count==mid2) ele2 = nums1[i];
+                i++;
+            }else {
+                if(count==mid1) ele1 = nums2[j];
+                if(count==mid2) ele2 = nums2[j];
+                j++;
+            }
+            count++;
+        }
+
+        while(i<nums1.length){
+            if(count==mid1) ele1 = nums1[i];
+            if(count==mid2) ele2 = nums1[i];
+            i++;
+            count++;
+        }
+        while(j<nums2.length){
+            if(count==mid1) ele1 = nums1[j];
+            if(count==mid2) ele2 = nums1[j];
+            j++;
+            count++;
+        }
+        if((nums1.length+nums2.length)%2==1){
+            return ele2;
+        }else{
+            return (double) ele1+ (double) ele2 /2;
+        }
+    }
+
 }
 
 /*nums1 = [1, 3, 8, 9, 15]
