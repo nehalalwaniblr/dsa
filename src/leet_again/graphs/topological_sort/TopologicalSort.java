@@ -1,6 +1,14 @@
 package leet_again.graphs.topological_sort;
 
-/*For directed acyclic graphs only. Why?
+/*
+Topological sort is a linear ordering of vertices in a Directed Acyclic Graph (DAG) such that for every directed edge
+
+, vertex
+ comes before
+. It arranges nodes to satisfy dependency constraints, commonly used in task scheduling, build systems, and dependency resolution
+
+
+For directed acyclic graphs only. Why?
  * For undirected graph like this; we dont know which is the source/parent
  *      1--2
  * For cyclic graph like below; we run in loop 1->2 and 2->1 and so on

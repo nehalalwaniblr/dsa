@@ -5,7 +5,7 @@ import java.util.*;
 /*
  * This problem can be solved in two ways
  * 1. DFS: Use dfs recursively and maintain a map of old node as key and new node as its val
- * If the old node already exist that means new node is also there right coz we are creating the map and putting this while iterating through the neigbours lisy
+ * If the old node already exist that means new node is also there right coz we are creating the map and putting this while iterating through the neighbours list
  * If the node exist in map simply add it as new nodes neighbour(else part), if not create a new node and do a dfs
  *
  * 2. BFS:

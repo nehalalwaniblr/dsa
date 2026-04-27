@@ -13,7 +13,7 @@ public class ConstructBTFromPreANdInOrderTraversal {
         for (int i = 0; i < inorder.length; i++) {
             inorderIndexMap.put(inorder[i], i);
         }
-//    2. construct map recursively on preorder
+//    2. construct tree recursively on preorder
         return constructTree(preorder, inorderIndexMap, 0, preorder.length-1);
     }
 

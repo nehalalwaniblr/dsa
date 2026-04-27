@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 /*
- * Start with boundary 0s and mark all the connected O's that they cant be converted to X
+ * Start with boundary 0s and mark all the connected O's(to 1) that they cant be converted to X
  * Convert the rest Xs to 0s
  * */
 public class SurroundedRegions {

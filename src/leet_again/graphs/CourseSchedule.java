@@ -3,7 +3,16 @@ package leet_again.graphs;
 import java.util.ArrayList;
 import java.util.List;
 
-//this is different from undirected graph like below coz in that we do dfs and the visited aray is applicable to all nodes in any recursive call
+//
+// Topological sort is a linear ordering of vertices in a Directed Acyclic Graph (DAG) such that for every directed edge
+//A->B
+//,A vertex
+// comes before B
+//. It arranges nodes to satisfy dependency constraints, commonly used in task scheduling, build systems, and dependency resolution
+
+
+// Cycles in directed graphs; for cycles in un-directed graph see CycleInUnDirectedGraph
+// this is different from undirected graph like below coz in that we do dfs and the visited aray is applicable to all nodes in any recursive call
 //           1--2--3
 //but in directed graph like this
 //           1-->2<--3       see 2 is parent of 1 but 2 is also parent of 3. If we use the same visited array and parent check it will fail for directed graph
@@ -55,10 +64,10 @@ public class CourseSchedule {
     }
 
     public static void main(String[] args) {
-//        System.out.println(new CourseSchedule().canFinish(2, new int[][]{{1,0 }}));
-//        System.out.println(new CourseSchedule().canFinish(2, new int[][]{{1,0 },{0,1}}));
+        System.out.println(new CourseSchedule().canFinish(2, new int[][]{{1,0 }}));
+        System.out.println(new CourseSchedule().canFinish(2, new int[][]{{1,0 },{0,1}}));
         System.out.println(new CourseSchedule().canFinish(20, new int[][]{{0,10},{3,18},{5,5},{6,11},{11,14},{13,1},{15,1},{17,4}}));
-//        System.out.println(new CourseSchedule().canFinish(2, new int[][]{{0, 1}}));
+        System.out.println(new CourseSchedule().canFinish(2, new int[][]{{0, 1}}));
 
 
     }

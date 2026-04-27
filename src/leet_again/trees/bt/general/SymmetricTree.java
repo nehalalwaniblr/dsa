@@ -30,7 +30,6 @@ public class SymmetricTree {
             TreeNode right = queue.poll();
             if (left == null && right == null)
                 continue;
-            ;
             if (left == null)
                 return false;
             if (right == null)

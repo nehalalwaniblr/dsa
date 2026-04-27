@@ -78,7 +78,7 @@ public class HouseRobber {
 
 //    Third approach
 public int rob3(int[] nums) {
-    int[] dp = new int[nums.length+1];
+    int[] dp = new int[nums.length+1]; //max stolen money till house i
     if(nums.length==1)
         return nums[0];
     dp[0]=0;

@@ -7,7 +7,7 @@ import java.util.List;
 /*
 * 1. In undirected graph for give array of edges convert to adjaceny list
 * 2. For each node dfs for its neigbours and neibours of neighbours
-* 3. Check visited as exisitng dfs and also check that the neighbour node and the parent node arent same;
+* 3. Check visited as existing dfs and also check that the neighbour node and the parent node arent same;
 * i.e. when you do dfs and this is undirected graph you end up reaching the back(start node). So comparing only visited wont help
 * You need to use parent node too
 *    1-----2

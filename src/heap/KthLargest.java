@@ -5,19 +5,19 @@ import java.util.PriorityQueue;
 public class KthLargest {
 
     public int kthLargestNumber(int[] nums, int k) {
-        // Min-Heap to store top k largest numbers
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>();
+        // Min-Heap to store top k the largest numbers
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
         // Add elements to heap
         for (Integer num : nums) {
-            maxHeap.add(num);
-            if (maxHeap.size() > k) {
-                maxHeap.poll(); // Remove smallest element if heap exceeds size k
+            minHeap.add(num);
+            if (minHeap.size() > k) {
+                minHeap.poll(); // Remove smallest element if heap exceeds size k
             }
         }
 
         // The root of the heap is the k-th largest number
-        return maxHeap.poll();
+        return minHeap.poll();
     }
 
     public static void main(String[] args) {

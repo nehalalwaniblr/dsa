@@ -1,7 +1,12 @@
 package leet_again.graphs.traversal;
 
 import java.util.*;
-
+/*
+* Some assumptions for every graph problem:
+* - each node is unique that why we'll be able to keep a visited array
+* - Each node starts with val 0 or even not we'll assume it;
+* - bfs dfs code works the same for both directed and undirected graph
+* */
 public class BFS {
     public ArrayList<Integer> bfs(ArrayList<ArrayList<Integer>> adj) {
         // code here
